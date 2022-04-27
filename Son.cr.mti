@@ -1,0 +1,130 @@
+{C:/Users/HuynhDucTran/Desktop/full option/V3/cpu_tb.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/cpu_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity cpu_tb
+-- Compiling architecture behavior of cpu_tb
+-- Loading entity cpu
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/cpu.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/cpu.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity cpu
+-- Compiling architecture cpu_behave of cpu
+-- Loading entity PC
+-- Loading entity controller
+-- Loading entity store_instruction
+-- Loading package NUMERIC_STD
+-- Loading entity mux3to1
+-- Loading entity datapath
+-- Loading package System_Definition
+-- Loading entity dpmem
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/mux3to1.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/mux3to1.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity mux3to1
+-- Compiling architecture mux3to1_arch of mux3to1
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/IR.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/IR.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity store_instruction
+-- Compiling architecture store_instructionArch of store_instruction
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/pc.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/pc.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity PC
+-- Compiling architecture pc_behave of PC
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/controller.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/controller.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity controller
+-- Compiling architecture controller_arch of controller
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/array_rf.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/array_rf.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity array_rf
+-- Compiling architecture array_rf_arch of array_rf
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/datapath.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/datapath.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity datapath
+-- Compiling architecture datapath_arch of datapath
+-- Loading package NUMERIC_STD
+-- Loading entity mux3to1
+-- Loading entity array_rf
+-- Loading entity ALU
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/dpmem_tb.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/dpmem_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity dpmem_tb
+-- Compiling architecture behavior of dpmem_tb
+-- Loading package NUMERIC_STD
+-- Loading package System_Definition
+-- Loading entity dpmem
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/mux4to1.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/mux4to1.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity mux4to1
+-- Compiling architecture mux4to1_behave of mux4to1
+
+} {} {}} {C:/Users/HuynhDucTran/Desktop/full option/V3/alu.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/HuynhDucTran/Desktop/full option/V3/alu.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture ALU_be of ALU
+
+} {} {}}

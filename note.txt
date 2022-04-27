@@ -1,0 +1,93 @@
+library IEEE;
+library work;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use WORK.system_definition.ALL;
+ 
+-------------------------------------------------------------------------------
+-- Synchronous Dual Port Memory
+-------------------------------------------------------------------------------
+entity dpmem is
+  
+  port (
+    -- Writing
+    Clk              : in  std_logic;          -- clock
+	  Reset             : in  std_logic; -- Reset input
+    addr              : in  std_logic_vector(ADDR_WIDTH - 1 downto 0);   --  Address
+	-- Writing Port
+	  Wen               : in  std_logic;          -- Write Enable
+    Datain            : in  std_logic_vector(DATA_WIDTH - 1 downto 0) := (others => '0');   -- Input Data: Initialize to 0
+    -- Reading Port
+    
+    Ren               : in  std_logic;          
+    Dataout           : buffer std_logic_vector(DATA_WIDTH - 1 downto 0)   
+    
+    );
+end dpmem;
+ 
+
+
+
+architecture dpmem_arch of dpmem is
+   
+  type DATA_ARRAY is array (integer range <>) of std_logic_vector(DATA_WIDTH - 1 downto 0); 
+
+  signal   M       :     DATA_ARRAY(0 to 50) := (others => (others => '0')); 
+
+  constant PM_Size : Integer := 16; -- Size of program memory :(range 255 downto 0 )
+
+  constant PM : DATA_ARRAY(0 to PM_Size-1) := (	
+
+
+    -- 
+
+    X"001E",	  -- RF[0] = M[30] = 4 mov1           0           
+    X"011F",	  -- RF[1] = M[31] = 5 mov1           1   
+    X"3322",    -- RF[3] = 34 -- mov4                2     
+    X"3407",    -- RF[4] = 7 -- mov4                  3
+
+    X"0520",	  -- RF[5] = M[32] = 6 mov1               4
+
+    X"1023",		-- M[35] = RF[0] = 4 mov2                 5
+      
+    X"2130",    -- M[ RF[3] ] = RF[1] = 5 mov3                  6
+    X"4400",    -- add RF[4] = RF[4] + RF[0] = 7 + 4 = 11             7
+    X"5410",    -- sub RF[4] = RF[4] - RF[1] = 11 - 5 = 6             8
+    X"7410",    -- OR RF[4] = RF[4] OR RF[1] -- 0110 or 0101 = 0111 = 7             9
+    X"8400",    -- AND RF[4] = RF[4] AND RF[0] :   0111  and 0100 = 0100 = 4        10
+
+    X"6A0E",    -- jump to instruct memory 14 if  14                      11
+
+    X"3508",    -- RF[5] = 8 -- mov4      12
+    X"3509",    -- RF[6] = 9 -- mov4      13
+    X"370A",    -- RF[7] = 10 -- mov4     14*
+
+    X"A00C"    -- jump to M[11] chay lenh thu 11   15
+
+    );
+begin  -- begin of architecture
+	
+  --  Read/Write process
+
+  RW_Proc : process (clk, Reset)
+  begin  -- begin of process
+    if Reset = '1' then
+
+                    Dataout <= (others => '0');
+                    M(0 to PM_Size-1) <= PM; -- initialize program memory
+                    M(30 to 32) <= (x"0004", x"0005", x"0006");
+
+    elsif (clk'event and clk = '1') then   -- rising clock edge
+          if Wen = '1' then
+                          M(conv_integer(addr)) <= Datain; -- ensure that data cant overwrite on program
+          else
+              if Ren = '1' then
+                    Dataout <= M(conv_integer(addr));
+              else
+                    Dataout <= Dataout;
+              end if;
+          end if;
+      end if;
+  end process  RW_Proc;
+     
+end dpmem_arch;
